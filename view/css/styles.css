@@ -1,0 +1,24 @@
+.img{
+    width: 350px;
+    height: 350px!important;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    transition: all 0.2s ease-in-out;
+}
+
+.img-doctores{
+    background-image: url("../../imagenes/doctor.jpg");
+}
+
+.img-pacientes{
+    background-image: url("../../imagenes/paciente.jpg");
+}
+
+.img:hover{
+    transform: scale(1.05);
+}
+
+a{
+    text-decoration: none; 
+}
