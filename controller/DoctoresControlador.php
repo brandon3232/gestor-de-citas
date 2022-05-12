@@ -31,6 +31,10 @@ class DoctoresControlador
         $doctores = new Doctores_model();
         $doctores->insertar($contra, $nombre, $apellidos, $cel, $tel, $cor, $dir, $esp);
         $data["titulo"] = "Doctores";
+
+        $_SESSION['mensaje'] = "Paciente agregado correctamente";
+        $_SESSION['tipo_mensaje'] = "success";
+
         $this->index();
     }
 
@@ -40,11 +44,16 @@ class DoctoresControlador
         $doctores = new Doctores_model();
         $doctores->eliminar($id);
         $data["titulo"] = "Doctores";
+
+        $_SESSION['mensaje'] = "Paciente eliminado correctamente";
+        $_SESSION['tipo_mensaje'] = "danger";
+
         $this->index();
     }
     public function modificar($id)
     {
         $doctores = new Doctores_model();
+        $data['id']=$id;
         $data["Doctores"] = $doctores->get_doctor($id);
         require_once "view/admin/doctores_modificar.php";
     }
@@ -64,6 +73,10 @@ class DoctoresControlador
         $doctores = new Doctores_model();
         $doctores->modificar($id, $contra, $nombre, $apellidos, $cel, $tel, $correo, $direccion, $especialidad);
         $data["titulo"] = "Doctores";
+
+        $_SESSION['mensaje'] = "Paciente modificado correctamente";
+        $_SESSION['tipo_mensaje'] = "success";
+
         $this->index();
     }
 }

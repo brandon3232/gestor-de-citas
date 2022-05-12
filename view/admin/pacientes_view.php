@@ -10,7 +10,7 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav w-100 d-flex justify-content-between">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="menu_admin.html">Menu</a>
+                    <a class="nav-link active" aria-current="page" href="menu_admin.php">Menu</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle active me-md-5" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -42,7 +42,7 @@
 
             <div class="card ">
                 <div class="card-body">
-                    <form id="nuevo" name="nuevo" method="POST" action="index.php?controller=vehiculos&accion=guarda" autocomplete="off">
+                    <form id="nuevo" name="nuevo" method="POST" action="index.php?controller=pacientes&accion=guarda" autocomplete="off">
                         <div class="mb-3">
                             <label for="placa" class="form-label">Nombre</label>
                             <input type="text" class="form-control" id="IDnombre" name="nombre">

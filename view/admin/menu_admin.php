@@ -11,7 +11,7 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav w-100 d-flex justify-content-between">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="menu_admin.html">Menu</a>
+                        <a class="nav-link active" aria-current="page" href="menu_admin.php">Menu</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle active me-md-5" href="#" id="navbarDropdownMenuLink"

@@ -26,9 +26,14 @@ public function guarda(){
     $dir=$_POST['direccion'];
     $res= $_POST['res'];
     $cel=$_POST['cr'];
-
+    
+    
    $pacientes = new Pacientes_model();
    $pacientes->insertar($nombre,$apellidos,$fn,$dir,$cel,$tel,$contra,$res,$cel);
+
+    $_SESSION['mensaje'] = "Paciente agregado correctamente";
+    $_SESSION['tipo_mensaje'] = "success";
+
    $data["titulo"]="Pacientes";
    $this->index();
     
@@ -39,12 +44,17 @@ public function eliminar($id){
     $pacientes=new Pacientes_model();
     $pacientes->eliminar($id);
     $data["titulo"]="Pacientes";
+    
+    $_SESSION['mensaje'] = "Paciente eliminado correctamente";
+    $_SESSION['tipo_mensaje'] = "danger";
+
    $this->index();
 
 
 }
 public function modificar($id){
  $pacientes = new Pacientes_model();
+ $data['id']=$id;
  $data["Pacientes"]=$pacientes->get_paciente($id);
  require_once "view/admin/paciente_modificar.php";
       
@@ -66,6 +76,10 @@ public function actualizar(){
     $pacientes->modificar($id,$nombre,$ape,$f_n,$dir,$cel,
     $tel,$con,$res,$cel_r);
     $data["titulo"]="Pacientes";
+
+    $_SESSION['mensaje'] = "Paciente actualizado correctamente";
+    $_SESSION['tipo_mensaje'] = "success";
+
     $this->index();
 
 }
