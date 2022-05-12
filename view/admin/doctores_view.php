@@ -1,4 +1,4 @@
-<?php include("../../includes/header.php") ?>
+<?php include("includes/header.php") ?>
 
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -10,7 +10,7 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav w-100 d-flex justify-content-between">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="menu_admin.php">Menu</a>
+                    <a class="nav-link active" aria-current="page" href="view/admin/menu_admin.php">Menu</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle active me-md-5" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -100,7 +100,7 @@
                 <tbody>
 
                     <?php
-                    foreach ($data["vehiculos"] as $dato) {
+                    foreach ($data["doctores"] as $dato) {
 
 
                         echo "<tr>";
@@ -131,4 +131,4 @@
     </div>
 
 
-    <?php include("../../includes/footer.php") ?>
+    <?php include("includes/footer.php") ?>

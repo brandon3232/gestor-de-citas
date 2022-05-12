@@ -1,4 +1,4 @@
-<?php include("../../includes/header.php") ?>
+<?php include("includes/header.php") ?>
 
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -65,7 +65,7 @@
                         </div>
                         <div class="mb-3">
                             <label for="color" class="form-label">Fecha de nacimiento</label>
-                            <input type="text" class="form-control" id="IDcorreo" name="fn">
+                            <input type="date" class="form-control" id="IDcorreo" name="fn">
                         </div>
                         <div class="mb-3">
                             <label for="color" class="form-label">Direccion</label>
@@ -106,7 +106,7 @@
                 <tbody>
 
                     <?php
-                    foreach ($data["vehiculos"] as $dato) {
+                    foreach ($data["pacientes"] as $dato) {
 
 
                         echo "<tr>";
@@ -138,4 +138,4 @@
     </div>
 
 
-    <?php include("../../includes/footer.php") ?>
+    <?php include("includes/footer.php") ?>

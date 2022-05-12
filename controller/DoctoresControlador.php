@@ -3,9 +3,8 @@
 class DoctoresControlador
 {
 
-    public function __construct()
-    {
-        require_once "model/Doctores_Model.php";
+    public function __construct(){
+        require_once "model/Doctores_model.php";
     }
 
     public function index()
@@ -79,4 +78,5 @@ class DoctoresControlador
 
         $this->index();
     }
+    
 }

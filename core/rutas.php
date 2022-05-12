@@ -3,13 +3,14 @@
     function cargarControlador($controlador) {
 
         $nombreControlador = ucwords($controlador)."Controlador";
-        $archivoControlador = "controler/".ucwords($nombreControlador).'.php'; 
+        $archivoControlador = "controller/".ucwords($nombreControlador).'.php'; 
 
         if (!is_file($archivoControlador)) {
             $nombreControlador = ucwords(CONTROLADOR_PRINCIPAL)."Controlador";
-            $archivoControlador = "controler/".ucwords($nombreControlador).'.php'; 
+            $archivoControlador = "controller/".ucwords($nombreControlador).'.php'; 
         }
 
+        
         require_once $archivoControlador;
         $control = new $nombreControlador(); 
         return $control;

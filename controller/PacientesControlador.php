@@ -1,6 +1,6 @@
 <?php
 
-class PacientesControl{
+class PacientesControlador{
 
 public function __construct(){
     require_once "model/Pacientes_model.php";
@@ -25,11 +25,11 @@ public function guarda(){
     $fn=$_POST['fn'];
     $dir=$_POST['direccion'];
     $res= $_POST['res'];
-    $cel=$_POST['cr'];
-    
+    $cel_res=$_POST['cr'];
     
    $pacientes = new Pacientes_model();
-   $pacientes->insertar($nombre,$apellidos,$fn,$dir,$cel,$tel,$contra,$res,$cel);
+   $pacientes->insertar($nombre,$apellidos,$fn,$dir,$cel,$tel,$contra,$res,$cel_res);
+   echo "2";
 
     $_SESSION['mensaje'] = "Paciente agregado correctamente";
     $_SESSION['tipo_mensaje'] = "success";

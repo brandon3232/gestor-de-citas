@@ -21,9 +21,10 @@ class Pacientes_model{
     }
 
     public function insertar($nombre, $a,$fn,$d,$c,$t,$con,$nr,$cr){
-        $resultado=$this->db->query("INSERT INTO pacientes (nombre,apellidos,fecha_nacimiento,
-        direccion,celular,telefono,contrasena,nombre_responsable,cel_responsable) 
-        values ('$nombre','$a','$fn','$d','$c','$t','$con','$nr','$cr')");
+
+   echo "3";
+        $resultado=$this->db->query("INSERT INTO pacientes (nombre,apellido,direccion,celular,telefono,contrasena,nombre_responsable,cel_responsable) values ('$nombre','$a','$d','$c','$t','$con','$nr','$cr')");
+   echo "4";
 
     }
     public function eliminar($id){
