@@ -53,8 +53,9 @@ class DoctoresControlador
     {
         $doctores = new Doctores_model();
         $data['id']=$id;
-        $data["Doctores"] = $doctores->get_doctor($id);
-        require_once "view/admin/doctores_modificar.php";
+        $data["doctores"] = $doctores->get_doctor($id);
+        
+        require_once "view/admin/doctor_modificar.php";
     }
 
     public function actualizar()

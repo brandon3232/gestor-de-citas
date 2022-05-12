@@ -30,11 +30,11 @@
     <div class="container">
         <div class="row mt-5">
             <div class="container d-flex justify-content-center flex-wrap">
-                <a href="doctores_view.php" class="mx-lg-3 my-2 my-lg-0">
+                <a href="../../index.php?controller=doctores&accion=index" class="mx-lg-3 my-2 my-lg-0">
                     <div class="img img-thumbnail shadow-lg img-doctores"></div>
                     <p class="text-center fs-3">Doctores</p>
                 </a>
-                <a href="pacientes_view.php" class="mx-lg-3 my-2 my-lg-0">
+                <a href="../../index.php?controller=pacientes&accion=index" class="mx-lg-3 my-2 my-lg-0">
                     <div class="img img-thumbnail shadow-lg img-pacientes"></div>
                     <p class="text-center fs-3">Pacientes</p>
                 </a>

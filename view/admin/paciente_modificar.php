@@ -1,4 +1,4 @@
-<?php include("../../includes/header.php") ?>
+<?php include("includes/header.php") ?>
 
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -10,7 +10,7 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav w-100 d-flex justify-content-between">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="menu_admin.php">Menu</a>
+                    <a class="nav-link active" aria-current="page" href="view/admin/menu_admin.php">Menu</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle active me-md-5" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -42,45 +42,45 @@
 
             <div class="card ">
                 <div class="card-body">
-                    <form id="nuevo" name="nuevo" method="POST" action="index.php?controller=pacientes&accion=guarda" autocomplete="off">
+                    <form id="nuevo" name="nuevo" method="POST" action="index.php?controller=pacientes&accion=actualizar" autocomplete="off">
                         
                         <input type="hidden" id="id" name="id" value="<?php echo $data['id']?>">
 
                         <div class="mb-3">
                             <label for="placa" class="form-label">Nombre</label>
-                            <input type="text" class="form-control" name="nombre" value="<?php echo ['Pacientes']['nombre'] ?>">
+                            <input type="text" class="form-control" name="nombre" value="<?php echo $data["Pacientes"]["nombre"] ?>">
                         </div>
                         <div class="mb-3">
                             <label for="modelo" class="form-label">Apellidos</label>
-                            <input type="text" class="form-control" name="apellidos" value="<?php echo ['Pacientes']['apellido'] ?>">
+                            <input type="text" class="form-control" name="apellidos" value="<?php echo $data['Pacientes']['apellido'] ?>">
                         </div>
                         <div class="mb-3">
                             <label for="marca" class="form-label">Contraseña</label>
-                            <input type="password" class="form-control" name="contrasena" value="<?php echo ['Pacientes']['contrasena'] ?>">
+                            <input type="password" class="form-control" name="contrasena" value="<?php echo $data['Pacientes']['contrasena'] ?>">
                         </div>
                         <div class="mb-3">
                             <label for="anio" class="form-label">Celular</label>
-                            <input type="text" class="form-control" name="celular" value="<?php echo ['Pacientes']['celular'] ?>">
+                            <input type="text" class="form-control" name="celular" value="<?php echo $data['Pacientes']['celular'] ?>">
                         </div>
                         <div class="mb-3">
                             <label for="color" class="form-label">Telefono</label>
-                            <input type="text" class="form-control" name="telefono" value="<?php echo ['Pacientes']['telefono'] ?>">
+                            <input type="text" class="form-control" name="telefono" value="<?php echo $data['Pacientes']['telefono'] ?>">
                         </div>
                         <div class="mb-3">
                             <label for="color" class="form-label">Fecha de nacimiento</label>
-                            <input type="text" class="form-control" name="f_n" value="<?php echo ['Pacientes']['fecha_nacimiento'] ?>">
+                            <input type="text" class="form-control" name="f_n" value="<?php echo $data['Pacientes']['fecha_nacimiento'] ?>">
                         </div>
                         <div class="mb-3">
                             <label for="color" class="form-label">Direccion</label>
-                            <input type="text" class="form-control" name="direccion" value="<?php echo ['Pacientes']['direccion'] ?>">
+                            <input type="text" class="form-control" name="direccion" value="<?php echo $data['Pacientes']['direccion'] ?>">
                         </div>
                         <div class="mb-3">
                             <label for="color" class="form-label">Nombre del responsable</label>
-                            <input type="text" class="form-control" name="responsable" value="<?php echo ['Pacientes']['nombre_responsable'] ?>">
+                            <input type="text" class="form-control" name="responsable" value="<?php echo $data['Pacientes']['nombre_responsable'] ?>">
                         </div>
                         <div class="mb-3">
                             <label for="color" class="form-label">Celular del responsable</label>
-                            <input type="text" class="form-control" name="res_cel" value="<?php echo ['Pacientes']['cel_responsable'] ?>">
+                            <input type="text" class="form-control" name="res_cel" value="<?php echo $data['Pacientes']['cel_responsable'] ?>">
                         </div>
 
                         <input type="submit" value="Guardar" id="guardar" name="guardar" class="btn btn-primary">
@@ -93,4 +93,4 @@
     </div>
 
 
-    <?php include("../../includes/footer.php") ?>
+    <?php include("includes/footer.php") ?>

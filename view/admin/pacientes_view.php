@@ -10,7 +10,7 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav w-100 d-flex justify-content-between">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="menu_admin.php">Menu</a>
+                    <a class="nav-link active" aria-current="page" href="view/admin/menu_admin.php">Menu</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle active me-md-5" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -44,39 +44,39 @@
                 <div class="card-body">
                     <form id="nuevo" name="nuevo" method="POST" action="index.php?controller=pacientes&accion=guarda" autocomplete="off">
                         <div class="mb-3">
-                            <label for="placa" class="form-label">Nombre</label>
+                            <label for="nombre" class="form-label">Nombre</label>
                             <input type="text" class="form-control" id="IDnombre" name="nombre">
                         </div>
                         <div class="mb-3">
-                            <label for="modelo" class="form-label">Apellidos</label>
+                            <label for="apellido" class="form-label">Apellidos</label>
                             <input type="text" class="form-control" id="IDapellidos" name="apellidos">
                         </div>
                         <div class="mb-3">
-                            <label for="marca" class="form-label">Contraseña</label>
+                            <label for="contrasena" class="form-label">Contraseña</label>
                             <input type="password" class="form-control" id="IDcontrasena" name="contraseña">
                         </div>
                         <div class="mb-3">
-                            <label for="anio" class="form-label">Celular</label>
+                            <label for="celular" class="form-label">Celular</label>
                             <input type="text" class="form-control" id="IDcelular" name="celular">
                         </div>
                         <div class="mb-3">
-                            <label for="color" class="form-label">Telefono</label>
+                            <label for="telefono" class="form-label">Telefono</label>
                             <input type="text" class="form-control" id="IDtelefono" name="telefono">
                         </div>
                         <div class="mb-3">
-                            <label for="color" class="form-label">Fecha de nacimiento</label>
+                            <label for="fn" class="form-label">Fecha de nacimiento</label>
                             <input type="date" class="form-control" id="IDcorreo" name="fn">
                         </div>
                         <div class="mb-3">
-                            <label for="color" class="form-label">Direccion</label>
+                            <label for="direccion" class="form-label">Direccion</label>
                             <input type="text" class="form-control" id="IDdireccion" name="direccion">
                         </div>
                         <div class="mb-3">
-                            <label for="color" class="form-label">Nombre del responsable</label>
+                            <label for="res" class="form-label">Nombre del responsable</label>
                             <input type="text" class="form-control" id="IDres" name="res">
                         </div>
                         <div class="mb-3">
-                            <label for="color" class="form-label">Celular del responsable</label>
+                            <label for="cr" class="form-label">Celular del responsable</label>
                             <input type="text" class="form-control" id="IDcr" name="cr">
                         </div>
 
@@ -121,10 +121,10 @@
                         echo "<td>" . $dato["nombre_responsable"] . "</td>";
                         echo "<td>" . $dato["cel_responasable"] . "</td>";
                         echo "<td>";
-                        echo "<button class=\"btn btn-success me-1\"><a class=\"text-light\" href='index.php?controller=vehiculos&accion=modificar&id=" . $dato["id"] . "'><i class=\"fa-solid fa-pen\"></i> </a></button>";
+                        echo "<button class=\"btn btn-success me-1\"><a class=\"text-light\" href='index.php?controller=pacientes&accion=modificar&id=" . $dato["id"] . "'><i class=\"fa-solid fa-pen\"></i> </a></button>";
 
 
-                        echo "<button class=\"btn btn-danger\"><a class=\"text-light\" href='index.php?controller=vehiculos&accion=eliminar&id=" . $dato["id"] . "'><i class=\"fa-solid fa-trash\"></a></button>";
+                        echo "<button class=\"btn btn-danger\"><a class=\"text-light\" href='index.php?controller=pacientes&accion=eliminar&id=" . $dato["id"] . "'><i class=\"fa-solid fa-trash\"></a></button>";
                         echo "</td>";
 
                         echo "</tr>";

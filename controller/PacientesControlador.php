@@ -40,9 +40,9 @@ public function guarda(){
 }
 
 public function eliminar($id){
-    
     $pacientes=new Pacientes_model();
     $pacientes->eliminar($id);
+    echo "1";
     $data["titulo"]="Pacientes";
     
     $_SESSION['mensaje'] = "Paciente eliminado correctamente";
